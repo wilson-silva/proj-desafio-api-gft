@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "1dca7e15-87d0-4e3a-9f11-933b7558691e",
+		"name": "desafio-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "categoria",
+			"item": [
+				{
+					"name": "buscar todas as categorias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/categorias",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar uma categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/categorias/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "criar uma categoria",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiZGVzYWZpb0FQSSIsImV4cCI6MTY1MDQ2MzI4N30.yoZuQXHYXBweAjhHgGoAA1uExrOHXOHdZ2Vg2ZsxoGw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"tecnologia\": \"Teste\",\r\n        \"nome\": \"Turma7-2021\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categorias/cadastrar",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir uma categoria",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categorias/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar uma categoria",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"tecnologia\": \"Turma4-2021\",\r\n        \"nome\": \"Ruby\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/categorias/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"categorias",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "starter",
+			"item": [
+				{
+					"name": "buscar todos os starters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/starters",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar um starter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/starters/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "criar um starter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiZGVzYWZpb0FQSSIsImV4cCI6MTY1MDcyMjMwOX0.MQIIOGvPXuBPdXHa7FsbuDyxMGL3AC3L53wXHkdVL5k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"contentType": "",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "json",
+									"value": " {\n    \"nome\": \"teste\",\n    \"cpf\": \"102.929.878-54\",\n    \"quatroLetras\": \"tttt\",\n    \"email\": \"teste@hotmail\"\n}",
+									"contentType": "application/json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/starters",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir um starter",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/starters/4",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar um starter",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n {\r\n    \"id\": 5,\r\n    \"nome\": \"Paulo Silva\",\r\n    \"cpf\": \"960.739.268-04\",\r\n    \"quatroLetras\": \"pasi\",\r\n    \"email\": \"paulo@hotmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/starters/5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar starter por nome",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiZGVzYWZpb0FQSSIsImV4cCI6MTY1MDY4MDU0OX0.scgqlKUSzy1ro_5r7gMvAgHwKOxNZNuxDBP3zpFuc44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/starters/nome/Wilson Silva",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters",
+								"nome",
+								"Wilson Silva"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos os starters ordem alfabetica crescente por nome",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiZGVzYWZpb0FQSSIsImV4cCI6MTY1MDY4MjMyNH0.cFWOQd1KbcZfMsactzSOm_-oX4CeZ6SAndLcX00dpX8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/starters/asc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters",
+								"asc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos os starters ordem alfabetica decrescente por nome",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiZGVzYWZpb0FQSSIsImV4cCI6MTY1MDY4MjMyNH0.cFWOQd1KbcZfMsactzSOm_-oX4CeZ6SAndLcX00dpX8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/starters/desc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"starters",
+								"desc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "autenticacao",
+			"item": [
+				{
+					"name": "autenticacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"admin\",\r\n    \"senha\":\"Gft@1234\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "criar um usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiZGVzYWZpb0FQSSIsImV4cCI6MTY1MDM4NTk1OX0.YZFEghKYi4LdNDgrG54bOpNNgc5TdSC-bg4cbcbPmqg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"usuario\": \"usuario3\",\r\n        \"senha\": \"Gft@3333\",\r\n        \"perfilId\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar todos os usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar um usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir um usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterar um usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"usuario\": \"usuario2\",\r\n        \"senha\": \"Gft@2222\",\r\n        \"perfilId\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/usuarios/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
